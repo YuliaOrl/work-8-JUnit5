@@ -1,9 +1,6 @@
 package guru.qa;
 
 import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -45,10 +42,10 @@ public class WebTest {
 
     static Stream<Arguments> sitePobedaMenuEnumTest() {
         return Stream.of(
-                Arguments.of(Lang.English, List.of("Online check-in", "Manage my booking", "Info/Rules")),
-                Arguments.of(Lang.Deutsch, List.of("Buchung bearbeiten", "Online check-in", "Infos/Regeln")),
-                Arguments.of(Lang.Italiano, List.of("Gestisci prenotazione", "Online check-in", "Info/Regole")),
-                Arguments.of(Lang.Русский, List.of("Забронировать билет", "Управление бронированием", "Онлайн-регистрация", "Информация"))
+                Arguments.of(Lang.ENGLISH, List.of("Online check-in", "Manage my booking", "Info/Rules")),
+                Arguments.of(Lang.DEUTSCH, List.of("Buchung bearbeiten", "Online check-in", "Infos/Regeln")),
+                Arguments.of(Lang.ITALIANO, List.of("Gestisci prenotazione", "Online check-in", "Info/Regole")),
+                Arguments.of(Lang.РУССКИЙ, List.of("Забронировать билет", "Управление бронированием", "Онлайн-регистрация", "Информация"))
         );
     }
 
